@@ -20,7 +20,7 @@ public class HmwIlCarroLogin {
     }
     @Test
     public void LoginPositiveTest(){
-        WebElement loginBtn = wd.findElement(By.xpath("//*[text()='Log in']"));
+        WebElement loginBtn = wd.findElement(By.xpath("//*[text()='Log in']")); // css div.header a:last-child
         loginBtn.click();
         WebElement emailInput = wd.findElement(By.xpath("//input[@id='email']"));
         emailInput.click();
@@ -30,7 +30,9 @@ public class HmwIlCarroLogin {
         passInput.click();
         passInput.clear();
         passInput.sendKeys("Ol4ik1Ya");
-        wd.findElement(By.cssSelector("button[type='submit']")).click();
+//        wd.findElement(By.cssSelector("button[type='submit']")).click();
+        wd.findElement(By.xpath("//form//button[1]")).click();
+        wd.findElement(By.xpath("//button[text()='Ok']")).click();
     }
 
     @AfterMethod
