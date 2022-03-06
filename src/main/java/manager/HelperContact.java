@@ -60,7 +60,7 @@ public class HelperContact extends HelperBase{
         click(By.xpath("//button[.='Remove']"));
     }
 
-    public void removeOneContactCount(){
+    public int removeOneContactCount(){
         int countBefore = countOfContacts();
         logger.info("Before remove 'One contact tests' contact was ---- > " + countBefore);
 
@@ -71,6 +71,52 @@ public class HelperContact extends HelperBase{
             wd.findElement(By.xpath("//button[.='Remove']")).click();
             pause(500);
         }
+
+        int countAfter = countOfContacts();
+        logger.info("After remove 'One contact tests' count is ---- > " + countAfter);
+
+        return countAfter - countBefore;
+
     }
 
+    public boolean isContactListEmpty() {
+        return wd.findElements(By.cssSelector(".contact-item_card__2SOIM h3")).isEmpty();
+    }
+
+    public void providerOfContacts() {
+        if(countOfContacts()<3){
+            int index = (int)(System.currentTimeMillis()/1000)%3600;
+            for (int i=0; i<3; i++){
+                Contact contact = Contact.builder()
+                        .name("Zoa")
+                        .lastName("Snow")
+                        .phone("1212"+i+index)
+                        .email("zoa"+i+index+"@gmail.com")
+                        .address("Haifa")
+                        .description("Friend")
+                        .build();
+                openContactForm();
+                fillContactForm(contact);
+                saveContactForm();
+                pause(1000);
+            }
+        }
+    }
+
+    public void removeAllContactsNotWork() {
+        List<WebElement> list = wd.findElements(By.cssSelector(".contact-item_card__2SOIM"));
+        for (WebElement el: list){
+            el.click();
+            wd.findElement(By.xpath("//button[text()='Remove']")).click();
+            pause(500);
+        }
+    }
+
+    public void removeAllContacts() {
+        while (wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size()!=0)
+        {
+            removeOneContactCount();
+        }
+
+    }
 }

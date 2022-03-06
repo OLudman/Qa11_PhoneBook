@@ -1,6 +1,8 @@
 package tests;
 
 import models.User;
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,6 +12,7 @@ public class RemoveContactTests extends TestBase {
         if(!app.getUser().isLogged()){
             app.getUser().login(new User().withEmail("noa@gmail.com").withPassword("Nnoa12345"));
         }
+        app.contact().providerOfContacts();
     }
 
     @Test
@@ -22,7 +25,13 @@ public class RemoveContactTests extends TestBase {
 
     @Test
     public void removeOneContactCount(){
-//        int count = app.contact().removeOneContact();
-//        assert countStart- countEnd =1
+        Assert.assertEquals(app.contact().removeOneContactCount(), 1);
     }
+
+    @Test
+    public void removeAllContacts(){
+        app.contact().removeAllContacts();
+        Assert.assertTrue(app.contact().isContactListEmpty());
+    }
+
 }
