@@ -29,11 +29,12 @@ public class HelperContact extends HelperBase{
     }
 
     public void saveContactForm() {
-        click(By.xpath("//b"));
+        click(By.cssSelector(".add_form__2rsm2 button"));
+//       click(By.xpath("//b"));
     }
 
     public int countOfContacts() {
-        return wd.findElements(By.cssSelector(".count-item_card_2SOIM")).size();
+        return wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size();
     }
 
     public boolean isContactCreatedByName(String name) {
@@ -55,7 +56,7 @@ public class HelperContact extends HelperBase{
     }
 
     public void removeOneContact(){
-        WebElement contact = wd.findElement(By.cssSelector(".contact-item_card_2SOIM"));
+        WebElement contact = wd.findElement(By.cssSelector(".contact-item_card__2SOIM"));
         contact.click();
         click(By.xpath("//button[.='Remove']"));
     }
@@ -65,9 +66,9 @@ public class HelperContact extends HelperBase{
         logger.info("Before remove 'One contact tests' contact was ---- > " + countBefore);
 
         if(!isContactListEmpty()){
-            String phone = wd.findElement(By.cssSelector(".contact-item_card_2SOIM h3")).getText();
+            String phone = wd.findElement(By.cssSelector(".contact-item_card__2SOIM h3")).getText();
             logger.info("The removed number was---->" + phone);
-            wd.findElement(By.cssSelector(".contact-item_card_2SOIM")).click();
+            wd.findElement(By.cssSelector(".contact-item_card__2SOIM")).click();
             wd.findElement(By.xpath("//button[.='Remove']")).click();
             pause(500);
         }

@@ -1,5 +1,6 @@
 package tests;
 
+import manager.MyDataProvider;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -12,6 +13,28 @@ public class LoginTest extends TestBase {
         if(app.getUser().isLogged()){
             app.getUser().logout();
         }
+    }
+
+    @Test(dataProvider = "loginValidData", dataProviderClass = MyDataProvider.class)
+    public void loginTest1PositiveDataProvider(String email, String password){
+        logger.info("User starts login process with email: "+ email+ " and password: "+ password);
+
+        app.getUser(). openLoginRegistrationForm();
+        app.getUser().fillLoginRegistrationForm(email, password);
+        app.getUser().submitLogin();
+        app.getUser().pause(5000);
+        Assert.assertTrue(app.getUser().isLogged());
+    }
+
+    @Test(dataProvider = "ContactValidData", dataProviderClass = MyDataProvider.class)
+    public void loginSuccessTestModelDataProvider(User user){
+        logger.info("User starts login process with data: ---->"+ user.toString());
+
+        app.getUser(). openLoginRegistrationForm();
+        app.getUser().fillLoginRegistrationForm(user);
+        app.getUser().submitLogin();
+        app.getUser().pause(5000);
+        Assert.assertTrue(app.getUser().isLogged());
     }
 
 //    @Test
@@ -30,7 +53,7 @@ public class LoginTest extends TestBase {
 //        Assert.assertTrue(wd.findElements(By.xpath("//button")).size()>0);
 //    }
 
-    @Test
+    @Test (groups ={"web"})
     public void loginTest2Positive(){
         User user = new User().withPassword("Nnoa12345$").withEmail("noa@gmail.com");
 

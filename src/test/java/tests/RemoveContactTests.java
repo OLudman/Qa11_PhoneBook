@@ -10,7 +10,7 @@ public class RemoveContactTests extends TestBase {
     @BeforeMethod
     public void preCondition(){
         if(!app.getUser().isLogged()){
-            app.getUser().login(new User().withEmail("noa@gmail.com").withPassword("Nnoa12345"));
+            app.getUser().login(new User().withEmail("noa@gmail.com").withPassword("Nnoa12345$"));
         }
         app.contact().providerOfContacts();
     }

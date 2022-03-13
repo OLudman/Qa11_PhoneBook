@@ -1,0 +1,64 @@
+23:40:08. INFO  manager.ApplicationManager - All tests starts in Chrome browser
+23:40:08. INFO  manager.ApplicationManager - All tests starts in Chrome browser
+23:40:10. INFO  tests.TestBase - Test name------------------> loginTest1PositiveDataProvider
+23:40:10. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:30. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:30. INFO  tests.TestBase - User starts login process with email: noa@gmail.com and password: Nnoa12345$
+23:40:30. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //a[text()='LOGIN']
+23:40:30. INFO  manager.MyListener - The element with locator ------>By.xpath: //a[text()='LOGIN']was found
+23:40:30. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //input[1]
+23:40:30. INFO  manager.MyListener - The element with locator ------>By.xpath: //input[1]was found
+23:40:31. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //input[2]
+23:40:31. INFO  manager.MyListener - The element with locator ------>By.xpath: //input[2]was found
+23:40:31. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[1]
+23:40:31. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[1]was found
+23:40:36. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:36. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:36. INFO  tests.TestBase - End of testloginTest1PositiveDataProvider
+23:40:36. INFO  tests.TestBase - Test name------------------> loginTest1PositiveDataProvider
+23:40:36. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:36. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:36. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:36. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:36. INFO  tests.TestBase - User starts login process with email: noa@gmail.com and password: Nnoa12345$
+23:40:36. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //a[text()='LOGIN']
+23:40:36. INFO  manager.MyListener - The element with locator ------>By.xpath: //a[text()='LOGIN']was found
+23:40:36. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //input[1]
+23:40:36. INFO  manager.MyListener - The element with locator ------>By.xpath: //input[1]was found
+23:40:37. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //input[2]
+23:40:37. INFO  manager.MyListener - The element with locator ------>By.xpath: //input[2]was found
+23:40:37. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[1]
+23:40:37. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[1]was found
+23:40:42. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:42. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:42. INFO  tests.TestBase - End of testloginTest1PositiveDataProvider
+23:40:42. INFO  tests.TestBase - Test name------------------> loginTest2Positive
+23:40:42. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:42. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:42. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:42. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:42. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //a[text()='LOGIN']
+23:40:42. INFO  manager.MyListener - The element with locator ------>By.xpath: //a[text()='LOGIN']was found
+23:40:42. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //input[1]
+23:40:42. INFO  manager.MyListener - The element with locator ------>By.xpath: //input[1]was found
+23:40:43. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //input[2]
+23:40:43. INFO  manager.MyListener - The element with locator ------>By.xpath: //input[2]was found
+23:40:43. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[1]
+23:40:43. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[1]was found
+23:40:48. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:48. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:48. INFO  tests.TestBase - End of testloginTest2Positive
+23:40:48. INFO  tests.TestBase - Test name------------------> loginTestNegativeWrongPassword
+23:40:48. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:48. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:48. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[text()='Sign Out']
+23:40:48. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[text()='Sign Out']was found
+23:40:48. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //a[text()='LOGIN']
+23:40:48. INFO  manager.MyListener - The element with locator ------>By.xpath: //a[text()='LOGIN']was found
+23:40:48. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //input[1]
+23:40:48. INFO  manager.MyListener - The element with locator ------>By.xpath: //input[1]was found
+23:40:48. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //input[2]
+23:40:48. INFO  manager.MyListener - The element with locator ------>By.xpath: //input[2]was found
+23:40:49. INFO  manager.MyListener - Start search element by locator ------>By.xpath: //button[1]
+23:40:49. INFO  manager.MyListener - The element with locator ------>By.xpath: //button[1]was found
+23:40:54. INFO  tests.TestBase - End of testloginTestNegativeWrongPassword

@@ -14,13 +14,6 @@ public class HelperUser extends HelperBase {
         super(wd);
     }
 
-    @BeforeMethod
-    public void preCondition(){
-        if(isLogged()){
-            logout();
-        }
-    }
-
     public void openLoginRegistrationForm() {
         click(By.xpath("//a[text()='LOGIN']"));
     }
