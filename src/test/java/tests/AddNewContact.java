@@ -32,7 +32,7 @@ public class AddNewContact extends TestBase{
         app.contact().pause(2000);
         Assert.assertEquals(countEnd-countStart, 1);
         Assert.assertTrue(app.contact().isContactCreatedByName(contact.getName()));
-        Assert.assertTrue(app.contact().isContactCreatedByPhone(contact.getPhone()));
+        Assert.assertTrue(app.contact().isContactCreatedByEmail(contact.getEmail()));
     }
 
     @Test (invocationCount = 3) //how much contacts will be opened
@@ -64,7 +64,7 @@ public class AddNewContact extends TestBase{
 
         Assert.assertEquals(countEnd-countStart, 1);
         Assert.assertTrue(app.contact().isContactCreatedByName(contact.getName()));
-//        Assert.assertTrue(app.contact().isContactCreatedByPhone(contact.getPhone()));
+        Assert.assertTrue(app.contact().isContactCreatedByEmail(contact.getEmail()));
     }
 
     @Test (enabled = false) // (dataProvider =  "dt")
@@ -95,6 +95,6 @@ public class AddNewContact extends TestBase{
 
         Assert.assertEquals(countEnd-countStart, 1);
         Assert.assertTrue(app.contact().isContactCreatedByName(contact.getName()));
-        Assert.assertTrue(app.contact().isContactCreatedByPhone(contact.getPhone()));
+        Assert.assertTrue(app.contact().isContactCreatedByEmail(contact.getEmail()));
     }
 }

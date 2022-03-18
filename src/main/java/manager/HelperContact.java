@@ -46,7 +46,7 @@ public class HelperContact extends HelperBase{
         return false;
     }
 
-    public boolean isContactCreatedByPhone(String phone) {
+    public boolean isContactCreatedByEmail(String phone) {
         List<WebElement> list = wd.findElements(By.cssSelector("h3"));
         for (WebElement el:list){
             if(el.getText().equals(phone))
